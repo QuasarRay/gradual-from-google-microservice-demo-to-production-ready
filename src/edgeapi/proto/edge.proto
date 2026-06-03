@@ -1,0 +1,14 @@
+// src/edge-api-rs/proto/edge.proto
+syntax = "proto3";
+
+package edgeapi;
+
+service EdgeApi {
+  rpc Health(HealthRequest) returns (HealthResponse) {}
+}
+
+message HealthRequest {}
+
+message HealthResponse {
+  string status = 1;
+}

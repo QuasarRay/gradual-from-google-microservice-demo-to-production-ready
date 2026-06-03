@@ -1,22 +1,21 @@
-mod config;
+// src/edge-api-rs/src/main.rs
 mod clients;
-mod grpc;
-mod error;
-mod routes;
+mod config;
 mod dtos;
+mod error;
+mod grpc;
+mod routes;
 
 use summer::{auto_config, App};
+use summer_web::{WebConfigurator, WebPlugin};
+use summer_grpc::GrpcPlugin;
 
-use summer_web::{
-    WebConfigurator, WebPlugin,
-};
-
-// Main function entry
-#[auto_config(WebConfigurator)] // auto config web router
+#[auto_config(WebConfigurator)]
 #[tokio::main]
 async fn main() {
     App::new()
         .add_plugin(WebPlugin)
+        .add_plugin(GrpcPlugin)
         .run()
         .await
 }

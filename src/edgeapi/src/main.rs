@@ -1,6 +1,7 @@
 mod config;
 mod clients;
 mod grpc;
+mod error;
 
 use summer::{auto_config, App};
 

@@ -7,7 +7,8 @@ edition = "2024"
 [dependencies]
 
 summer = "0.7.1"
-summer-web = "0.7.2"
+summer-web = { version = "0.7.2", features = ["openapi", "openapi-swagger"] }
+schemars = "1.2.1"
 # summer-boot = "1.4.2"
 summer-grpc = "0.7.1"
 summer-macros = "0.7.1"

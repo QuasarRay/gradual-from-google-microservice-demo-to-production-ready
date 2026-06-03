@@ -1,4 +1,5 @@
 mod config;
+mod clients;
 
 use anyhow::Context;
 use summer::{auto_config, App};

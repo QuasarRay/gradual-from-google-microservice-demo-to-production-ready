@@ -1,19 +1,20 @@
+use schemars::JsonSchema;
 // src/edge-api-rs/src/dto/cart.rs
 use serde::{Deserialize, Serialize};
 
-#[derive(Debug, Clone, Deserialize)]
+#[derive(Debug, Clone, Deserialize, JsonSchema)]
 pub struct AddCartItemRequestDto {
     pub product_id: String,
     pub quantity: i32,
 }
 
-#[derive(Debug, Clone, Serialize)]
+#[derive(Debug, Clone, Serialize, JsonSchema)]
 pub struct CartItemDto {
     pub product_id: String,
     pub quantity: i32,
 }
 
-#[derive(Debug, Clone, Serialize)]
+#[derive(Debug, Clone, Serialize, JsonSchema)]
 pub struct CartDto {
     pub user_id: String,
     pub items: Vec<CartItemDto>,

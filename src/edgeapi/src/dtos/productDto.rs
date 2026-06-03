@@ -1,14 +1,15 @@
+use schemars::JsonSchema;
 // src/edge-api-rs/src/dto/product.rs
 use serde::Serialize;
 
-#[derive(Debug, Clone, Serialize)]
+#[derive(Debug, Clone, Serialize, JsonSchema)]
 pub struct MoneyDto {
     pub currency_code: String,
     pub units: i64,
     pub nanos: i32,
 }
 
-#[derive(Debug, Clone, Serialize)]
+#[derive(Debug, Clone, Serialize, JsonSchema)]
 pub struct ProductDto {
     pub id: String,
     pub name: String,

@@ -1,0 +1,28 @@
+# src/edge-api-rs/config/app.toml
+[web]
+binding = "0.0.0.0"
+port = 8080
+graceful = true
+global_prefix = ""
+
+[web.middlewares]
+compression = { enable = true }
+catch_panic = { enable = true }
+logger = { enable = true, level = "info" }
+limit_payload = { enable = true, body_limit = "1MB" }
+timeout_request = { enable = true, timeout = 5000 }
+
+[grpc]
+binding = "0.0.0.0"
+port = 9090
+graceful = true
+
+[backend]
+product_catalog_addr = "http://productcatalogservice:3550"
+currency_addr = "http://currencyservice:7000"
+cart_addr = "http://cartservice:7070"
+recommendation_addr = "http://recommendationservice:8080"
+checkout_addr = "http://checkoutservice:5050"
+shipping_addr = "http://shippingservice:50051"
+ad_addr = "http://adservice:9555"
+default_currency = "USD"

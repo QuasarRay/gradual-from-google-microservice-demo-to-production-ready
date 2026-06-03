@@ -1,5 +1,6 @@
 mod config;
 mod clients;
+mod grpc;
 
 use anyhow::Context;
 use summer::{auto_config, App};

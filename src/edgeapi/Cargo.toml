@@ -15,6 +15,7 @@ summer-macros = "0.7.1"
 tokio = { version = "1.52.3", features = ["full"] }
 
 tonic = "0.14.6"
+tonic-prost = "0.14.6"
 prost = "0.14.3"
 tower = "0.5.3"
 tower-http = { version = "0.6.11", features = ["trace", "timeout", "cors", "compression-gzip"]}

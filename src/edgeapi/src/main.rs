@@ -6,9 +6,6 @@ use anyhow::Context;
 use summer::{auto_config, App};
 
 use summer_web::{
-    axum::response::IntoResponse,
-    error::Result,
-    extractor::{Component, Path},
     WebConfigurator, WebPlugin,
 };
 use summer_web::{get, route};

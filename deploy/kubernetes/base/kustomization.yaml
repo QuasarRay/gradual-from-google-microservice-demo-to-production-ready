@@ -23,6 +23,6 @@ resources:
 - services/frontend
 # - loadgenerator.yaml
 - paymentservice.yaml
-- productcatalogservice.yaml
+- services/productcatalog
 - recommendationservice.yaml
 - shippingservice.yaml

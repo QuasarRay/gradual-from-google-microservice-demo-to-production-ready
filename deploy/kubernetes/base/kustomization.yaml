@@ -17,7 +17,7 @@ kind: Kustomization
 resources:
 - adservice.yaml
 - services/cart
-- checkoutservice.yaml
+- services/checkout
 - currencyservice.yaml
 - emailservice.yaml
 - services/frontend

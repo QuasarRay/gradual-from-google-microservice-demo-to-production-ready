@@ -21,7 +21,7 @@ resources:
 - services/currency
 - services/email
 - services/frontend
-# - loadgenerator.yaml
+# - services/loadgenerator
 - services/payment
 - services/productcatalog
 - services/recommendation

@@ -22,7 +22,7 @@ resources:
 - emailservice.yaml
 - services/frontend
 # - loadgenerator.yaml
-- paymentservice.yaml
+- services/payment
 - services/productcatalog
 - recommendationservice.yaml
 - shippingservice.yaml

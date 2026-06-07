@@ -25,4 +25,4 @@ resources:
 - services/payment
 - services/productcatalog
 - recommendationservice.yaml
-- shippingservice.yaml
+- services/shipping

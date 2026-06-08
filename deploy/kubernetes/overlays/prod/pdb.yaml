@@ -11,6 +11,16 @@ spec:
 apiVersion: policy/v1
 kind: PodDisruptionBudget
 metadata:
+  name: edgeapi
+spec:
+  maxUnavailable: 1
+  selector:
+    matchLabels:
+      app: edgeapi
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
   name: cartservice
 spec:
   maxUnavailable: 1

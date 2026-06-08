@@ -26,3 +26,4 @@ resources:
 - services/productcatalog
 - services/recommendation
 - services/shipping
+- services/edgeapi

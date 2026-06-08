@@ -7,4 +7,4 @@ recommendation_addr = "${RECOMMENDATION_SERVICE_ADDR:http://recommendationservic
 checkout_addr = "${CHECKOUT_SERVICE_ADDR:http://checkoutservice:5050}"
 shipping_addr = "${SHIPPING_SERVICE_ADDR:http://shippingservice:50051}"
 ad_addr = "${AD_SERVICE_ADDR:http://adservice:9555}"
-default_currency = "${DEFAULT_CURRENCY:USD}"
+default_currency = "${DEFAULT_CURRENCY:ISK}"

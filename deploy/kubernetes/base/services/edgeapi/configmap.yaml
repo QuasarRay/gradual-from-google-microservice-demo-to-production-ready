@@ -8,11 +8,11 @@ metadata:
     app.kubernetes.io/component: edge-api
     app.kubernetes.io/part-of: online-boutique
 data:
-  BACKEND_PRODUCT_CATALOG_ADDR: "http://productcatalogservice:3550"
-  BACKEND_CURRENCY_ADDR: "http://currencyservice:7000"
-  BACKEND_CART_ADDR: "http://cartservice:7070"
-  BACKEND_RECOMMENDATION_ADDR: "http://recommendationservice:8080"
-  BACKEND_CHECKOUT_ADDR: "http://checkoutservice:5050"
-  BACKEND_SHIPPING_ADDR: "http://shippingservice:50051"
-  BACKEND_AD_ADDR: "http://adservice:9555"
-  BACKEND_DEFAULT_CURRENCY: "ISK"
+  product_catalog_addr: "http://productcatalogservice:3550"
+  currency_addr: "http://currencyservice:7000"
+  cart_addr: "http://cartservice:7070"
+  recommendation_addr: "http://recommendationservice:8080"
+  checkout_addr: "http://checkoutservice:5050"
+  shipping_addr: "http://shippingservice:50051"
+  ad_addr: "http://adservice:9555"
+  default_currency: "ISK"

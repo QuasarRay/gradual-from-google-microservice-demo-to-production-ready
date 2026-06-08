@@ -8,9 +8,11 @@ resources:
   - namespace.yaml
   - http-route.yaml
   - pdb.yaml
+  - autoscaling
 
 labels:
   - pairs:
       app.kubernetes.io/part-of: online-boutique
       app.kubernetes.io/managed-by: kustomize
       environment: prod
+    includeTemplates: true

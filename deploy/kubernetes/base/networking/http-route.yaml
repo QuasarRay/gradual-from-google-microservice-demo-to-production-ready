@@ -2,13 +2,16 @@ apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
 metadata:
   name: frontend-http-redirect
+  labels:
+    route-binding.online-boutique.io/gateway: public-web
+    route-binding.online-boutique.io/listener: http
 spec:
   parentRefs:
-    - name: app-web
-      namespace: online-boutique-gateway
-      sectionName: http
+    - name: generic-web
+      namespace: generic-gateway-namespace
+      sectionName: generic-http-section
   hostnames:
-    - shop.example.com
+    - generic.example.invalid
   rules:
     - filters:
         - type: RequestRedirect
@@ -21,13 +24,16 @@ apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
 metadata:
   name: frontend
+  labels:
+    route-binding.online-boutique.io/gateway: public-web
+    route-binding.online-boutique.io/listener: https
 spec:
   parentRefs:
-    - name: app-web
-      namespace: online-boutique-gateway
-      sectionName: https
+    - name: generic-web
+      namespace: generic-gateway-namespace
+      sectionName: generic-https-section
   hostnames:
-    - shop.example.com
+    - generic.example.invalid
   rules:
     - matches:
         - path:

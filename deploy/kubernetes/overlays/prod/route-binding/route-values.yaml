@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: prod-route-values
+  annotations:
+    config.kubernetes.io/local-config: "true"
+data:
+  GATEWAY_NAME: public-web
+  GATEWAY_NAMESPACE: online-boutique-gateway
+  HTTP_SECTION_NAME: http
+  HTTPS_SECTION_NAME: https
+  HOSTNAME: shop.example.com

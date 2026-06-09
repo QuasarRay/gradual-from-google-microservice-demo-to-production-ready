@@ -27,3 +27,4 @@ resources:
 - services/recommendation
 - services/shipping
 - services/edgeapi
+- networking

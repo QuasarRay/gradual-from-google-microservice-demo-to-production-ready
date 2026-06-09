@@ -6,9 +6,22 @@ namespace: online-boutique-prod
 resources:
   - ../../base
   - namespace.yaml
-#  - http-route.yaml
   - pdb.yaml
   - autoscaling
+patches:
+  - path: patches/http-route-prod.yaml
+    target:
+      group: gateway.networking.k8s.io
+      version: v1
+      kind: HTTPRoute
+      name: frontend-http-redirect
+
+  - path: patches/https-route-prod.yaml
+    target:
+      group: gateway.networking.k8s.io
+      version: v1
+      kind: HTTPRoute
+      name: frontend
 
 labels:
   - pairs:

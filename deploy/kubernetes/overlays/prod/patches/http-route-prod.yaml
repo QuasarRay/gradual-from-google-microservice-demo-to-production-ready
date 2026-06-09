@@ -1,0 +1,10 @@
+- op: replace
+  path: /spec/parentRefs
+  value:
+    - name: public-web
+      namespace: online-boutique-gateway
+      sectionName: http
+- op: replace
+  path: /spec/hostnames
+  value:
+    - prodshop.example.com

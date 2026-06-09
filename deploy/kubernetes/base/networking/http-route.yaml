@@ -4,7 +4,7 @@ metadata:
   name: frontend-http-redirect
 spec:
   parentRefs:
-    - name: public-web
+    - name: app-web
       namespace: online-boutique-gateway
       sectionName: http
   hostnames:
@@ -23,7 +23,7 @@ metadata:
   name: frontend
 spec:
   parentRefs:
-    - name: public-web
+    - name: app-web
       namespace: online-boutique-gateway
       sectionName: https
   hostnames:

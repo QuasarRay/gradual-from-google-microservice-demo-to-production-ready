@@ -5,4 +5,4 @@ resources:
   - route-values.yaml
 
 transformers:
-  - route-replacements.yaml
+  - route-replacement.yaml

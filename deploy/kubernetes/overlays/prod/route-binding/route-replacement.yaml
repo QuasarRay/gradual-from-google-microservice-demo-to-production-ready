@@ -6,7 +6,7 @@ replacements:
   - source:
       kind: ConfigMap
       name: prod-route-values
-      fieldPath: data.PUBLIC_WEB_GATEWAY_NAME
+      fieldPath: data.GATEWAY_NAME
     targets:
       - select:
           group: gateway.networking.k8s.io
@@ -19,7 +19,7 @@ replacements:
   - source:
       kind: ConfigMap
       name: prod-route-values
-      fieldPath: data.PUBLIC_WEB_GATEWAY_NAMESPACE
+      fieldPath: data.GATEWAY_NAMESPACE
     targets:
       - select:
           group: gateway.networking.k8s.io
@@ -32,7 +32,7 @@ replacements:
   - source:
       kind: ConfigMap
       name: prod-route-values
-      fieldPath: data.PUBLIC_WEB_HOSTNAME
+      fieldPath: data.HTTP_SECTION_NAME
     targets:
       - select:
           group: gateway.networking.k8s.io
@@ -45,7 +45,7 @@ replacements:
   - source:
       kind: ConfigMap
       name: prod-route-values
-      fieldPath: data.HTTP_LISTENER_SECTION_NAME
+      fieldPath: data.HTTPS_SECTION_NAME
     targets:
       - select:
           group: gateway.networking.k8s.io
@@ -58,7 +58,7 @@ replacements:
   - source:
       kind: ConfigMap
       name: prod-route-values
-      fieldPath: data.HTTPS_LISTENER_SECTION_NAME
+      fieldPath: data.HOSTNAME
     targets:
       - select:
           group: gateway.networking.k8s.io
